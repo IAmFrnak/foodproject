@@ -14,4 +14,32 @@ text: Roboto */
   place-items: center;
 }
 
+.location-top-bar {
+  display: flex;
+  align-content: center;
+  font-size: 10px;
+  background-color: grey;
+}
+
+.book-and-explore {
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-and-explore h3 {
+  font-size: 26px;
+}
+
+.book-and-explore p {
+  font-size: 16px;
+}
+
+.explore-button {
+  background-image: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  border-radius: 50%;
+  color: white;
+}
+
 /*# sourceMappingURL=styles.css.map */
