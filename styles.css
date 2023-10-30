@@ -12,24 +12,31 @@ text: Roboto */
 .logo {
   display: grid;
   place-items: center;
+  padding: 10px 0;
 }
 
 .location-top-bar {
   display: flex;
   align-content: center;
   font-size: 10px;
-  background-color: grey;
+  background-color: #C5C5C5;
+  justify-content: center;
+  gap: 13px;
+  padding: 10px 0px;
 }
 
 .book-and-explore {
-  background-color: lightgrey;
+  background-color: #E8E8E8;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 30px 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .book-and-explore h3 {
-  font-size: 26px;
+  font-size: 20px;
 }
 
 .book-and-explore p {
@@ -37,9 +44,18 @@ text: Roboto */
 }
 
 .explore-button {
-  background-image: linear-gradient(to bottom right, #9356DC, #FF79DA);
-  border-radius: 50%;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 25px;
   color: white;
+  padding: 10px 25px;
+}
+
+.how-it-works {
+  font-family: "Roboto", sans-serif;
+}
+
+.how-it-works h3 {
+  font-size: 25px;
 }
 
 /*# sourceMappingURL=styles.css.map */
