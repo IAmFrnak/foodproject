@@ -88,24 +88,34 @@ text: Roboto */
   font-weight: 600;
 }
 
-.card-body {
+.card {
   border-radius: 25px;
   background-color: white;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
   border-radius: 15px;
   min-width: 265px;
+  position: relative;
 }
-
-.card-img {
+.card .card-img {
   width: 100%;
   object-fit: cover;
   object-position: center;
   height: 175px;
   border-radius: 15px 15px 0 0;
 }
-
-.card-text-container {
+.card .card-text-container {
   padding: 2px 16px;
+}
+.card .card-row {
+  display: flex;
+  padding: 14px 7px;
+  gap: 55%;
+}
+.card .new {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: green;
 }
 
 .restaurants-container {
@@ -117,14 +127,8 @@ text: Roboto */
   font-family: "Roboto", sans-serif;
 }
 
-.card-row {
-  display: flex;
-  padding: 14px 7px;
-  gap: 55%;
-}
-
 .fa-heart:hover {
-  color: #9356DC;
+  background-color: #9356DC;
 }
 
 .footer {
@@ -132,6 +136,15 @@ text: Roboto */
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+li a {
+  color: white;
+}
+
+.footer-logo {
+  width: 100px;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */
