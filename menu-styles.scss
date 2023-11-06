@@ -26,5 +26,8 @@ $brand-tertiary: #99E2D0;
   .hero-image{
     object-fit: cover;
     object-position: center;
-    width: 150px;
-  }
+
+    img{
+        width: 100%;
+    }
+}
