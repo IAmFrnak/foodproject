@@ -59,35 +59,41 @@ font-size: 16px;
     align-items: flex-start;
     gap: 25px;
     margin: 50px 20px;
-}
-.how-it-works h3{
-    font-size: 25px;
-}
-.circle-number{
-    background-color: #9356DC;
-    border-radius: 100%;
-    padding: 5px;
-    text-align: center;
-    width: 30px;
-    color: white;
-    margin-left: -110px;
-}
-.button-guide{
-    background-color: #F5F5F5;
-    display: flex;
+
+    .menu-icon{
+        display: flex;
     align-items: center;
-    padding: 15px 100px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px 0px rgba(0 ,0, 0, 0.15);
-    gap: 25px;
-    max-width: 375px;
-    min-width: 245px;
+    }
+    .how-it-works h3{
+        font-size: 25px;
+    }
+    .circle-number{
+        background-color: #9356DC;
+        border-radius: 100%;
+        padding: 5px;
+        text-align: center;
+        width: 30px;
+        color: white;
+        margin-left: -110px;
+    }
+    .button-guide{
+        background-color: #F5F5F5;
+        display: flex;
+        align-items: center;
+        padding: 15px 100px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px 0px rgba(0 ,0, 0, 0.15);
+        gap: 25px;
+        max-width: 375px;
+        min-width: 225px;
+    }
+    .btn-icon{
+        display: flex;
+        gap: 25px;
+        font-weight: 600;
+    }
 }
-.btn-icon{
-    display: flex;
-    gap: 25px;
-    font-weight: 600;
-}
+
 .card{
     border-radius: 25px;
     background-color: white;
@@ -147,6 +153,7 @@ font-size: 16px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 25px;
 
     li{
         margin-bottom: 15px;

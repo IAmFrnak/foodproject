@@ -57,12 +57,14 @@ text: Roboto */
   gap: 25px;
   margin: 50px 20px;
 }
-
-.how-it-works h3 {
+.how-it-works .menu-icon {
+  display: flex;
+  align-items: center;
+}
+.how-it-works .how-it-works h3 {
   font-size: 25px;
 }
-
-.circle-number {
+.how-it-works .circle-number {
   background-color: #9356DC;
   border-radius: 100%;
   padding: 5px;
@@ -71,8 +73,7 @@ text: Roboto */
   color: white;
   margin-left: -110px;
 }
-
-.button-guide {
+.how-it-works .button-guide {
   background-color: #F5F5F5;
   display: flex;
   align-items: center;
@@ -81,10 +82,9 @@ text: Roboto */
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.15);
   gap: 25px;
   max-width: 375px;
-  min-width: 245px;
+  min-width: 225px;
 }
-
-.btn-icon {
+.how-it-works .btn-icon {
   display: flex;
   gap: 25px;
   font-weight: 600;
@@ -144,6 +144,7 @@ text: Roboto */
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 25px;
 }
 .footer li {
   margin-bottom: 15px;
