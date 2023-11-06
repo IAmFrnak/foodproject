@@ -80,7 +80,8 @@ text: Roboto */
   border-radius: 20px;
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.15);
   gap: 25px;
-  width: 375px;
+  max-width: 375px;
+  min-width: 245px;
 }
 
 .btn-icon {
@@ -109,14 +110,20 @@ text: Roboto */
 }
 .card .card-row {
   display: flex;
-  padding: 14px 7px;
-  gap: 55%;
+  padding: 14px 25px 14px 0;
 }
 .card .new {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: green;
+  background-color: #99E2D0;
+  margin-top: 10px;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 5px 25px;
+  border-radius: 2px;
+  font-weight: 600;
+  color: #139273;
 }
 
 .restaurants-container {
@@ -129,7 +136,7 @@ text: Roboto */
 }
 
 .fa-heart:hover {
-  background-color: #9356DC;
+  color: linear-gradient(28deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 87%);
 }
 
 .footer {
@@ -138,14 +145,16 @@ text: Roboto */
   flex-direction: column;
   gap: 10px;
 }
-
-li a {
+.footer li {
+  margin-bottom: 15px;
+}
+.footer li a {
   color: white;
 }
-
-.footer-logo {
+.footer .footer-logo {
   width: 100px;
   color: white;
+  margin-bottom: 15px;
 }
 
 /*# sourceMappingURL=styles.css.map */
