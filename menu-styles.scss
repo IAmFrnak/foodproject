@@ -2,8 +2,6 @@ $brand-primary: #9356DC;
 $brand-secondary: #FF79DA;
 $brand-tertiary: #99E2D0;
 
-
-
 * {
     // font-family: "Roboto", sans-serif;
     // font-family: "Shrikhand", serif;
@@ -25,7 +23,6 @@ $brand-tertiary: #99E2D0;
   }
   .hero-container{
     
-    
     .hero-img{
     object-fit: cover;
     object-position: center;
@@ -37,6 +34,20 @@ $brand-tertiary: #99E2D0;
     border-radius: 15px 15px 0 0;
     background-color: #F5F5F5;
     padding: 10px;
+    width: 100%;
+
+    .card{
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .card-text{
+        line-height: 5px;
+    }
   }
 
 
@@ -52,6 +63,7 @@ $brand-tertiary: #99E2D0;
     flex-direction: column;
     gap: 10px;
     padding: 25px;
+    text-decoration: none;
 
     li{
         margin-bottom: 15px;
