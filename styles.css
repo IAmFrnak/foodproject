@@ -140,6 +140,41 @@ text: Roboto */
   color: linear-gradient(28deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 87%);
 }
 
+.top-nav {
+  display: flex;
+  gap: 30px;
+}
+.top-nav .menu-logo {
+  width: 115px;
+}
+
+.hero-container .hero-img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.menu-container {
+  border-radius: 15px 15px 0 0;
+  background-color: #F5F5F5;
+  padding: 10px;
+  z-index: 10;
+  position: relative;
+  margin-top: -50px;
+}
+.menu-container .menu-card {
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.menu-container .menu-card-text {
+  line-height: 5px;
+}
+
 .footer {
   background-color: rgb(63, 63, 63);
   display: flex;

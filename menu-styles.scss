@@ -17,7 +17,7 @@ $brand-tertiary: #99E2D0;
     display: flex;
     gap: 30px;
 
-    .logo{
+    .menu-logo{
         width: 115px;
     }
   }
@@ -38,7 +38,7 @@ $brand-tertiary: #99E2D0;
     position: relative;
     margin-top: -50px;
 
-    .card{
+    .menu-card{
         background-color: white;
         border-radius: 20px;
         display: flex;
@@ -47,7 +47,7 @@ $brand-tertiary: #99E2D0;
         justify-content: space-between;
         padding: 0 20px;
     }
-    .card-text{
+    .menu-card-text{
         line-height: 5px;
     }
   }
