@@ -152,7 +152,8 @@ font-size: 16px;
 
 .top-nav{
     display: flex;
-    gap: 30px;
+    gap: 25%;
+    padding: 25px 0 13px 25px;
 
     .menu-logo{
         width: 115px;
@@ -229,6 +230,9 @@ font-size: 16px;
         justify-content: space-between;
         align-items: center;
         padding-right: 25px;
+    }
+    .menu-container-title .fa-heart{
+        font-size: 20px;
     }
   }
 

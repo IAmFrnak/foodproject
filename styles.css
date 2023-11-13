@@ -142,7 +142,8 @@ text: Roboto */
 
 .top-nav {
   display: flex;
-  gap: 30px;
+  gap: 25%;
+  padding: 25px 0 13px 25px;
 }
 .top-nav .menu-logo {
   width: 115px;
@@ -217,6 +218,9 @@ text: Roboto */
   justify-content: space-between;
   align-items: center;
   padding-right: 25px;
+}
+.menu-container .menu-container-title .fa-heart {
+  font-size: 20px;
 }
 
 .footer {
