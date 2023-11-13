@@ -185,32 +185,40 @@ font-size: 16px;
         justify-content: space-between;
         padding: 10px 20px;
     }
-    .entrees{
+    .Card-container{
         display: grid;
         gap: 15px;
     }
     .menu-card-text{
         padding: 10px 0;
     }
-    .menu-card-text:nth-child(1){
+    .card-name-bold{
         font-weight: bold;
         font-size: 22px;
+    }.card-description{
+        font-weight: 400;
+        font-size: 16px;
     }
-    .menu-container p{
+    .shrikhand{
         font-family: "Shrikhand", serif;
         font-weight: bolder;
         font-size: 27px;
     }
-    .entrees p{
+    .menu-title{
         font-weight: 300;
         font-size: 20px;
         border-bottom: 2px solid #99E2D0;
     }
-    .order-btn{
+    button{
         background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
         border-radius: 25px;
         color: white;
         padding: 10px 25px;
+        border: none;
+    }
+    .euro-bold{
+        font-weight: bold;
+        padding: 10px 0;
     }
   }
 
@@ -251,7 +259,7 @@ font-size: 16px;
         margin-bottom: 15px;
     }
 
-    ul:nth-child(1), (2){
+    ul:nth-child(1), :nth-child(2){
         font-weight: 500;
     }
 }
