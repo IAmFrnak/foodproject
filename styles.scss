@@ -168,13 +168,16 @@ font-size: 16px;
   }
 
   .menu-container{
-    border-radius: 15px 15px 0 0;
+    border-radius: 40px 40px 0 0;
     background-color: #F5F5F5;
-    padding: 10px;
+    padding: 30px 20px;
     z-index: 10;
     position: relative;
     margin-top: -50px;
     font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 
     .menu-card{
         background-color: white;
@@ -213,12 +216,19 @@ font-size: 16px;
         background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
         border-radius: 25px;
         color: white;
-        padding: 10px 25px;
+        padding: 15px 50px;
         border: none;
+        align-self: center;
     }
     .euro-bold{
         font-weight: bold;
         padding: 10px 0;
+    }
+    .menu-container-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 25px;
     }
   }
 
