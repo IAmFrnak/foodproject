@@ -99,6 +99,15 @@ text: Roboto */
   min-width: 265px;
   position: relative;
 }
+.card a .selected-state {
+  display: none;
+}
+.card a:hover .selected-state {
+  display: block;
+}
+.card a:hover .default-state {
+  display: none;
+}
 .card .card-img {
   width: 100%;
   object-fit: cover;

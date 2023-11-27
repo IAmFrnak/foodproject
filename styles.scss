@@ -103,6 +103,29 @@ font-size: 16px;
     min-width: 265px;
     position: relative;
 
+
+    a{
+        position: relative;
+        .default-state{
+            opacity: 1;
+            position: absolute;
+            transition: opacity 500ms ease-in;
+        }
+        .selected-state{
+            opacity: 0;
+            position: absolute;
+            transition: opacity 500ms ease-in;
+        }
+
+        &:hover{
+            .selected-state{
+                opacity: 1;
+            }
+            .default-state{
+                opacity: 0;;
+            }
+        }
+    }
     .card-img{
         width: 100%;
         object-fit: cover;
@@ -276,4 +299,10 @@ font-size: 16px;
     ul:nth-child(1), :nth-child(2){
         font-weight: 500;
     }
+}
+
+
+
+@media screen and (max-width: 992px) and (min-width: 769px){
+    
 }
