@@ -85,8 +85,8 @@ font-size: 16px;
         border-radius: 20px;
         box-shadow: 5px 5px 10px 0px rgba(0 ,0, 0, 0.15);
         gap: 25px;
-        max-width: 375px;
-        min-width: 225px;
+        width: 390px;
+        min-width: 200px;
     }
     .btn-icon{
         display: flex;
@@ -125,6 +125,10 @@ font-size: 16px;
                 opacity: 0;;
             }
         }
+        &:active{
+            background-color: $brand-primary;
+            transition: background-color 1s ease-in ;
+        }
     }
     .card-img{
         width: 100%;
@@ -139,8 +143,13 @@ font-size: 16px;
     }
 
     .card-row{
-        display: flex;
+        display: grid;
         padding: 14px 25px 14px 0;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .fa-heart{
+            grid-column-end: 5;
+        }
     }
 
     .new{ 
@@ -358,5 +367,87 @@ font-size: 16px;
             grid-column-start: 2;
             width: auto;
         }
+    }
+   .top-nav{
+    .menu-logo{
+        width: auto;
+    }
+    .fa-arrow-left{
+        font-size: 30px;
+    }
+   }
+   .menu-container{
+
+    button{
+        width: 100%;
+
+    }
+}
+    
+}
+
+@media screen and (min-width: 993px){
+    .restaurants-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 30px 1fr;
+
+
+
+        .card{
+            min-width: 300px;
+        }
+        h3{
+            grid-row-start: 1;
+        }
+        .full-palette{
+            grid-row-start: 2;
+        }
+        .enchanted-plate{
+            grid-row-start: 2;
+        }
+        .bastille{
+            grid-row-start: 2;
+        }
+        .le-gourmand{
+            grid-row-start: 2;
+        }
+    }
+    .menu-container{
+
+        button{
+            width: 100%;
+
+        }
+    }
+    .how-it-works{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 30px 1fr;
+
+        .button-guide{
+            grid-row-start: 2;
+            .circle-number{
+                width: 40px;
+            }
+        }
+        h3{
+            grid-column-start: 2;
+        }
+    }
+    .location-top-bar{
+        font-size: 16px;
+    }
+    .logo{
+        grid-template-columns: 1fr 1fr 1fr;
+
+
+        #logo{
+            grid-column-start: 2;
+            width: auto;
+        }
+    }
+    .menu-logo{
+        width: auto;
     }
 }
