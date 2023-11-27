@@ -304,5 +304,59 @@ font-size: 16px;
 
 
 @media screen and (max-width: 992px) and (min-width: 769px){
-    
+    .restaurants-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30px 1fr 1fr;
+
+
+
+        .card{
+            min-width: 300px;
+        }
+        h3{
+            grid-row-start: 1;
+        }
+        .full-palette{
+            grid-row-start: 2;
+        }
+        .enchanted-plate{
+            grid-column-start: 2;
+            grid-row-start: 2;
+        }
+        .bastille{
+            grid-row-start: 3;
+        }
+        .le-gourmand{
+            grid-column-start: 2;
+            grid-row-start: 3;
+        }
+    }
+    .how-it-works{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 30px 1fr;
+
+        .button-guide{
+            grid-row-start: 2;
+            .circle-number{
+                width: 40px;
+            }
+        }
+        h3{
+            grid-column-start: 2;
+        }
+    }
+    .location-top-bar{
+        font-size: 16px;
+    }
+    .logo{
+        grid-template-columns: 1fr 1fr 1fr;
+
+
+        #logo{
+            grid-column-start: 2;
+            width: auto;
+        }
+    }
 }
