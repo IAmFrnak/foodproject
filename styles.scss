@@ -107,7 +107,7 @@ font-size: 16px;
     position: relative;
 
 
-    a.restaurant__menu-link{
+    a.restaurant-menu-link{
         position: relative;
         .default-state{
             opacity: 1;
@@ -133,19 +133,13 @@ font-size: 16px;
             transition: background-color 1s ease-in ;
         }
     }
-    .restaurant__card-img{
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-        height: 175px;
-        border-radius: 15px 15px 0 0;
-    }
+    
 
-    .restaurant__card-text-container{
+    .restaurant-card-text-container{
         padding: 2px 16px;
     }
 
-    .restaurant__card-row{
+    .restaurant-card-row{
         display: grid;
         padding: 14px 25px 14px 0;
         grid-template-columns: 1fr 1fr 1fr;
@@ -157,9 +151,17 @@ font-size: 16px;
 
     
 }
+.restaurant-card-img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 175px;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+}
 .new{ 
     position: absolute;
-    top: 0;
+    // top: 0;
     right: 0;
     background-color: $brand-tertiary;
     margin-top: 10px;
@@ -220,7 +222,7 @@ font-size: 16px;
     gap: 30px;
 
     
-    .menu__card-container{
+    .menu-card-container{
         display: grid;
         gap: 15px;
     }
@@ -230,7 +232,7 @@ font-size: 16px;
         font-family: $shrik;
         font-size: 27px;
     }
-    .menu__title{
+    .menu-title{
         font-weight: 300;
         font-size: 20px;
         border-bottom: 2px solid #99E2D0;
@@ -244,19 +246,19 @@ font-size: 16px;
         align-self: center;
     }
     
-    .menu-container__title{
+    .menu-container-title{
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-right: 25px;
         
-        .menu-container__title .fa-heart{
+        .menu-container-title .fa-heart{
             font-size: 20px;
         }
     }
     
   }
-  .menu__card{
+  .menu-card{
     background-color: white;
     border-radius: 20px;
     display: flex;
@@ -269,14 +271,14 @@ font-size: 16px;
         font-weight: bold;
         padding: 10px 0;
     }
-    .menu__card-text{
+    .menu-card-text{
         padding: 10px 0;
     }
-    .menu__card-name--bold{
+    .menu-card-name--bold{
         font-weight: bold;
         font-size: 22px;
     }
-    .menu__card-description{
+    .menu-card-description{
         font-weight: 400;
         font-size: 16px;
     }
@@ -313,7 +315,7 @@ font-size: 16px;
     li a{
         color: white;
     }
-    .footer__logo{
+    .footer-logo{
         width: 100px;
         color: white;
         margin-bottom: 15px;
