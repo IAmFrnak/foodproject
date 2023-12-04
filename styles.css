@@ -82,13 +82,14 @@ text: Roboto */
   border-radius: 20px;
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.15);
   gap: 25px;
-  max-width: 375px;
-  min-width: 225px;
+  width: 390px;
+  min-width: 200px;
 }
 .how-it-works .btn-icon {
   display: flex;
   gap: 25px;
   font-weight: 600;
+  align-items: center;
 }
 
 .card {
@@ -99,14 +100,28 @@ text: Roboto */
   min-width: 265px;
   position: relative;
 }
+.card a {
+  position: relative;
+}
+.card a .default-state {
+  opacity: 1;
+  position: absolute;
+  transition: opacity 500ms ease-in;
+}
 .card a .selected-state {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 500ms ease-in;
 }
 .card a:hover .selected-state {
-  display: block;
+  opacity: 1;
 }
 .card a:hover .default-state {
-  display: none;
+  opacity: 0;
+}
+.card a:active {
+  background-color: #9356DC;
+  transition: background-color 1s ease-in;
 }
 .card .card-img {
   width: 100%;
@@ -119,8 +134,12 @@ text: Roboto */
   padding: 2px 16px;
 }
 .card .card-row {
-  display: flex;
+  display: grid;
   padding: 14px 25px 14px 0;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.card .card-row .fa-heart {
+  grid-column-end: 5;
 }
 .card .new {
   position: absolute;
@@ -253,6 +272,122 @@ text: Roboto */
 }
 .footer ul:nth-child(1), .footer :nth-child(2) {
   font-weight: 500;
+}
+
+@media screen and (max-width: 992px) and (min-width: 769px) {
+  .restaurants-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 1fr 1fr;
+  }
+  .restaurants-container .card {
+    min-width: 300px;
+  }
+  .restaurants-container h3 {
+    grid-row-start: 1;
+  }
+  .restaurants-container .full-palette {
+    grid-row-start: 2;
+  }
+  .restaurants-container .enchanted-plate {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  .restaurants-container .bastille {
+    grid-row-start: 3;
+  }
+  .restaurants-container .le-gourmand {
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
+  .how-it-works {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30px 1fr;
+  }
+  .how-it-works .button-guide {
+    grid-row-start: 2;
+  }
+  .how-it-works .button-guide .circle-number {
+    width: 40px;
+  }
+  .how-it-works h3 {
+    grid-column-start: 2;
+  }
+  .location-top-bar {
+    font-size: 16px;
+  }
+  .logo {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .logo #logo {
+    grid-column-start: 2;
+    width: auto;
+  }
+  .top-nav .menu-logo {
+    width: auto;
+  }
+  .top-nav .fa-arrow-left {
+    font-size: 30px;
+  }
+  .menu-container button {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 993px) {
+  .restaurants-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30px 1fr;
+  }
+  .restaurants-container .card {
+    min-width: 300px;
+  }
+  .restaurants-container h3 {
+    grid-row-start: 1;
+  }
+  .restaurants-container .full-palette {
+    grid-row-start: 2;
+  }
+  .restaurants-container .enchanted-plate {
+    grid-row-start: 2;
+  }
+  .restaurants-container .bastille {
+    grid-row-start: 2;
+  }
+  .restaurants-container .le-gourmand {
+    grid-row-start: 2;
+  }
+  .menu-container button {
+    width: 100%;
+  }
+  .how-it-works {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30px 1fr;
+  }
+  .how-it-works .button-guide {
+    grid-row-start: 2;
+  }
+  .how-it-works .button-guide .circle-number {
+    width: 40px;
+  }
+  .how-it-works h3 {
+    grid-column-start: 2;
+  }
+  .location-top-bar {
+    font-size: 16px;
+  }
+  .logo {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .logo #logo {
+    grid-column-start: 2;
+    width: auto;
+  }
+  .menu-logo {
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

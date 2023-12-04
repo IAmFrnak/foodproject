@@ -1,6 +1,8 @@
 $brand-primary: #9356DC;
 $brand-secondary: #FF79DA;
 $brand-tertiary: #99E2D0;
+$roboto: "Roboto", sans-serif;
+$shrik: "Shrikhand", serif;
 
 
 
@@ -8,7 +10,7 @@ $brand-tertiary: #99E2D0;
 /* logo and title: Shrikhand
 text: Roboto */
 * {
-    // font-family: "Roboto", sans-serif;
+    // font-family: $roboto;
     // font-family: "Shrikhand", serif;
     // color: $brand-primary;
     box-sizing: border-box;
@@ -40,7 +42,7 @@ text: Roboto */
     align-items: center;
     gap: 50px;
     padding: 30px 0;
-    font-family: "Roboto", sans-serif;
+    font-family: $roboto;
 }.book-and-explore h3{
     font-size: 20px;
 }
@@ -54,7 +56,7 @@ font-size: 16px;
     padding: 10px 25px;
 }
 .how-it-works{
-    font-family: "Roboto", sans-serif;
+    font-family: $roboto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -92,6 +94,7 @@ font-size: 16px;
         display: flex;
         gap: 25px;
         font-weight: 600;
+        align-items: center;
     }
 }
 
@@ -104,7 +107,7 @@ font-size: 16px;
     position: relative;
 
 
-    a{
+    a.restaurant__menu-link{
         position: relative;
         .default-state{
             opacity: 1;
@@ -130,7 +133,7 @@ font-size: 16px;
             transition: background-color 1s ease-in ;
         }
     }
-    .card-img{
+    .restaurant__card-img{
         width: 100%;
         object-fit: cover;
         object-position: center;
@@ -138,11 +141,11 @@ font-size: 16px;
         border-radius: 15px 15px 0 0;
     }
 
-    .card-text-container{
+    .restaurant__card-text-container{
         padding: 2px 16px;
     }
 
-    .card-row{
+    .restaurant__card-row{
         display: grid;
         padding: 14px 25px 14px 0;
         grid-template-columns: 1fr 1fr 1fr;
@@ -152,19 +155,20 @@ font-size: 16px;
         }
     }
 
-    .new{ 
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-color: $brand-tertiary;
-        margin-top: 10px;
-        margin-top: 20px;
-        margin-right: 20px;
-        padding: 5px 25px;
-        border-radius: 2px;
-        font-weight: 600;
-        color: #139273;
-    }
+    
+}
+.new{ 
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $brand-tertiary;
+    margin-top: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 5px 25px;
+    border-radius: 2px;
+    font-weight: 600;
+    color: #139273;
 }
 
 
@@ -174,12 +178,15 @@ font-size: 16px;
     gap: 25px;
     background-color: #F5F5F5;
     padding: 50px 15px;
-    font-family: "Roboto", sans-serif;
+    font-family: $roboto;
+    
+    
+    .fa-heart:hover{
+        color: linear-gradient(28deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 87%);
+    }
 }
 
-.fa-heart:hover{
-    color: linear-gradient(28deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 87%);
-}
+
 
 
 .top-nav{
@@ -207,40 +214,23 @@ font-size: 16px;
     z-index: 10;
     position: relative;
     margin-top: -50px;
-    font-family: "Roboto", sans-serif;
+    font-family: $roboto;
     display: flex;
     flex-direction: column;
     gap: 30px;
 
-    .menu-card{
-        background-color: white;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: space-between;
-        padding: 10px 20px;
-    }
-    .Card-container{
+    
+    .menu__card-container{
         display: grid;
         gap: 15px;
     }
-    .menu-card-text{
-        padding: 10px 0;
-    }
-    .card-name-bold{
-        font-weight: bold;
-        font-size: 22px;
-    }.card-description{
-        font-weight: 400;
-        font-size: 16px;
-    }
+    
+    
     .shrikhand{
-        font-family: "Shrikhand", serif;
-        font-weight: bolder;
+        font-family: $shrik;
         font-size: 27px;
     }
-    .menu-title{
+    .menu__title{
         font-weight: 300;
         font-size: 20px;
         border-bottom: 2px solid #99E2D0;
@@ -253,20 +243,44 @@ font-size: 16px;
         border: none;
         align-self: center;
     }
-    .euro-bold{
-        font-weight: bold;
-        padding: 10px 0;
-    }
-    .menu-container-title{
+    
+    .menu-container__title{
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-right: 25px;
+        
+        .menu-container__title .fa-heart{
+            font-size: 20px;
+        }
     }
-    .menu-container-title .fa-heart{
-        font-size: 20px;
-    }
+    
   }
+  .menu__card{
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+    .euro--bold{
+        font-weight: bold;
+        padding: 10px 0;
+    }
+    .menu__card-text{
+        padding: 10px 0;
+    }
+    .menu__card-name--bold{
+        font-weight: bold;
+        font-size: 22px;
+    }
+    .menu__card-description{
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
 
 
 
@@ -290,7 +304,7 @@ font-size: 16px;
     flex-direction: column;
     gap: 10px;
     padding: 25px;
-    font-family: "Roboto", sans-serif;
+    font-family: $roboto;
 
     li{
         margin-bottom: 15px;
@@ -299,7 +313,7 @@ font-size: 16px;
     li a{
         color: white;
     }
-    .footer-logo{
+    .footer__logo{
         width: 100px;
         color: white;
         margin-bottom: 15px;
