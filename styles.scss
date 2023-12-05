@@ -462,10 +462,30 @@ font-size: 16px;
 }
 
 @media screen and (min-width: 993px){
+    
+    .page-container{
+        
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 100px 300px 411px 1fr 250px;
+    grid-template-areas:
+        '. logo logo .'
+        '. loc loc .'
+        '. book book .'
+        '. how how .'
+        '. menu menu .'
+        '. footer footer .';
+
+    }
+    
+    
+    
     .restaurants-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 30px 1fr;
+        grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
 
 
 
@@ -497,9 +517,10 @@ font-size: 16px;
         }
     }
     .how-it-works{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 30px 1fr;
+        grid-area: how;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
 
         .button-guide{
             grid-row-start: 2;
@@ -513,9 +534,14 @@ font-size: 16px;
     }
     .location-top-bar{
         font-size: 16px;
+        grid-area: loc;
+        justify-self: center;
     }
     .logo{
-        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-area: logo;
+    justify-self: center;
 
 
         #logo{
@@ -525,5 +551,10 @@ font-size: 16px;
     }
     .menu-logo{
         width: auto;
+    }
+
+    .book-and-explore{
+        grid-area: book;
+        justify-self: center;
     }
 }
