@@ -486,6 +486,8 @@ font-size: 16px;
     display: flex;
     flex-direction: column;
     justify-self: center;
+    width: 100%;
+    }
 
 
 
@@ -518,15 +520,16 @@ font-size: 16px;
     }
     .how-it-works{
         grid-area: how;
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        justify-self: center;
 
         .button-guide{
             grid-row-start: 2;
-            .circle-number{
-                width: 40px;
-            }
+                .circle-number{
+                    width: 40px;
+                }
         }
         h3{
             grid-column-start: 2;
@@ -535,7 +538,7 @@ font-size: 16px;
     .location-top-bar{
         font-size: 16px;
         grid-area: loc;
-        justify-self: center;
+        width: 100%;
     }
     .logo{
     grid-column-start: 2;
@@ -556,8 +559,8 @@ font-size: 16px;
     .book-and-explore{
         grid-area: book;
         justify-self: center;
+        width: 100%;
     }
     .footer{
         grid-area: footer;
     }
-}

@@ -407,70 +407,79 @@ text: Roboto */
     display: flex;
     flex-direction: column;
     justify-self: center;
+    width: 100%;
   }
-  .restaurants-container .card {
+  .card {
     min-width: 300px;
   }
-  .restaurants-container h3 {
+  h3 {
     grid-row-start: 1;
   }
-  .restaurants-container .full-palette {
+  .full-palette {
     grid-row-start: 2;
   }
-  .restaurants-container .enchanted-plate {
+  .enchanted-plate {
     grid-row-start: 2;
   }
-  .restaurants-container .bastille {
+  .bastille {
     grid-row-start: 2;
   }
-  .restaurants-container .le-gourmand {
+  .le-gourmand {
     grid-row-start: 2;
   }
-  .menu-container button {
-    width: 100%;
-    max-width: 500px;
-    font-weight: 800;
-  }
-  .how-it-works {
-    grid-area: how;
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-  }
-  .how-it-works .button-guide {
-    grid-row-start: 2;
-  }
-  .how-it-works .button-guide .circle-number {
-    width: 40px;
-  }
-  .how-it-works h3 {
-    grid-column-start: 2;
-  }
-  .location-top-bar {
-    font-size: 16px;
-    grid-area: loc;
-    justify-self: center;
-  }
-  .logo {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-area: logo;
-    justify-self: center;
-  }
-  .logo #logo {
-    grid-column-start: 2;
-    width: auto;
-  }
-  .menu-logo {
-    width: auto;
-  }
-  .book-and-explore {
-    grid-area: book;
-    justify-self: center;
-  }
-  .footer {
-    grid-area: footer;
-  }
+}
+.menu-container button {
+  width: 100%;
+  max-width: 500px;
+  font-weight: 800;
+}
+
+.how-it-works {
+  grid-area: how;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  justify-self: center;
+}
+.how-it-works .button-guide {
+  grid-row-start: 2;
+}
+.how-it-works .button-guide .circle-number {
+  width: 40px;
+}
+.how-it-works h3 {
+  grid-column-start: 2;
+}
+
+.location-top-bar {
+  font-size: 16px;
+  grid-area: loc;
+  width: 100%;
+}
+
+.logo {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-area: logo;
+  justify-self: center;
+}
+.logo #logo {
+  grid-column-start: 2;
+  width: auto;
+}
+
+.menu-logo {
+  width: auto;
+}
+
+.book-and-explore {
+  grid-area: book;
+  justify-self: center;
+  width: 100%;
+}
+
+.footer {
+  grid-area: footer;
 }
 
 /*# sourceMappingURL=styles.css.map */
