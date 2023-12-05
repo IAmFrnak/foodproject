@@ -107,32 +107,7 @@ font-size: 16px;
     position: relative;
 
 
-    a.restaurant-menu-link{
-        position: relative;
-        .default-state{
-            opacity: 1;
-            position: absolute;
-            transition: opacity 500ms ease-in;
-        }
-        .selected-state{
-            opacity: 0;
-            position: absolute;
-            transition: opacity 500ms ease-in;
-        }
-
-        &:hover{
-            .selected-state{
-                opacity: 1;
-            }
-            .default-state{
-                opacity: 0;;
-            }
-        }
-        &:active{
-            background-color: $brand-primary;
-            transition: background-color 1s ease-in ;
-        }
-    }
+    
     
 
     .restaurant-card-text-container{
@@ -145,11 +120,37 @@ font-size: 16px;
         grid-template-columns: 1fr 1fr 1fr;
 
         .fa-heart{
-            grid-column-end: 5;
+            grid-column-start: 4;
         }
     }
 
     
+}
+.restaurant-menu-link{
+    position: relative;
+    .default-state{
+        opacity: 1;
+        position: absolute;
+        transition: opacity 500ms ease-in;
+    }
+    .selected-state{
+        opacity: 0;
+        position: absolute;
+        transition: opacity 500ms ease-in;
+    }
+
+    &:hover{
+        .selected-state{
+            opacity: 1;
+        }
+        .default-state{
+            opacity: 0;;
+        }
+    }
+    &:active{
+        background-color: $brand-primary;
+        transition: background-color 1s ease-in ;
+    }
 }
 .restaurant-card-img{
     width: 100%;
@@ -180,7 +181,7 @@ font-size: 16px;
     gap: 25px;
     background-color: #F5F5F5;
     padding: 50px 15px;
-    font-family: $roboto;
+    font-family: "Roboto", sans-serif;
     
     
     .fa-heart:hover{
@@ -232,11 +233,7 @@ font-size: 16px;
         font-family: $shrik;
         font-size: 27px;
     }
-    .menu-title{
-        font-weight: 300;
-        font-size: 20px;
-        border-bottom: 2px solid #99E2D0;
-    }
+    
     button{
         background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
         border-radius: 25px;
@@ -258,6 +255,26 @@ font-size: 16px;
     }
     
   }
+
+  .menu-title{
+    font-weight: 300;
+    font-size: 20px;
+    // border-bottom: 2px solid #99E2D0;
+    position: relative;
+    animation: fadeIn 2s ease-in-out forwards;
+    opacity: 0;
+    
+    .menu-title:after{
+        content: " ";
+        width: 40px;
+        height:5px;
+        background-color: $brand-tertiary;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+      }
+}
+
   .menu-card{
     background-color: white;
     border-radius: 20px;
@@ -266,6 +283,8 @@ font-size: 16px;
     align-items: flex-end;
     justify-content: space-between;
     padding: 10px 20px;
+    animation: fadeIn 2s ease-in-out forwards;
+    opacity: 0;
 
     .euro--bold{
         font-weight: bold;
@@ -282,6 +301,46 @@ font-size: 16px;
         font-weight: 400;
         font-size: 16px;
     }
+}
+
+.menu-card:nth-child(1){
+    animation-delay: .2s;
+}
+.menu-card:nth-child(2){
+    animation-delay: .4s;
+}
+.menu-card:nth-child(3){
+    animation-delay: .6s;
+}
+.menu-card:nth-child(4){
+    animation-delay: .8s;
+}
+.menu-card:nth-child(5){
+    animation-delay: 1s;
+}
+.menu-card:nth-child(6){
+    animation-delay: 1.2s;
+}
+.menu-card:nth-child(7){
+    animation-delay: 1.4s;
+}
+.menu-card:nth-child(8){
+    animation-delay: 1.6s;
+}
+.menu-card:nth-child(9){
+    animation-delay: 1.8s;
+}
+
+@keyframes fadeIn {
+    
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+    
 }
 
 
@@ -433,7 +492,8 @@ font-size: 16px;
 
         button{
             width: 100%;
-
+            max-width: 500px;
+            font-weight: 800;
         }
     }
     .how-it-works{
