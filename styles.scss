@@ -34,6 +34,8 @@ text: Roboto */
     justify-content: center;
     gap: 13px;
     padding: 10px 0px;
+    width: 100%;
+    font-family: $roboto;
 }
 .book-and-explore{
     background-color: #E8E8E8;
@@ -43,12 +45,17 @@ text: Roboto */
     gap: 50px;
     padding: 30px 0;
     font-family: $roboto;
-}.book-and-explore h3{
+    width: 100%;
+}
+
+.book-and-explore h3{
     font-size: 20px;
 }
+
 .book-and-explore p{
 font-size: 16px;
 }
+
 .explore-button{
     background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
     border-radius: 25px;
@@ -62,6 +69,7 @@ font-size: 16px;
     align-items: flex-start;
     gap: 25px;
     margin: 50px 20px;
+    width: 100%;
 
     .menu-icon{
         display: flex;
@@ -87,14 +95,15 @@ font-size: 16px;
         border-radius: 20px;
         box-shadow: 5px 5px 10px 0px rgba(0 ,0, 0, 0.15);
         gap: 25px;
-        width: 390px;
-        min-width: 200px;
+        max-width: 390px;
+        width: 80%;
     }
     .btn-icon{
         display: flex;
         gap: 25px;
         font-weight: 600;
         align-items: center;
+        white-space: nowrap;
     }
 }
 
@@ -117,7 +126,12 @@ font-size: 16px;
     .restaurant-card-row{
         display: grid;
         padding: 14px 25px 14px 0;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        
+        
+        .restaurant-card-name{
+            font-weight: 700;
+        }
 
         .fa-heart{
             grid-column-start: 4;
@@ -126,10 +140,17 @@ font-size: 16px;
 
     
 }
+.restaurant-card{
+    font-family: $roboto;
+}
 .restaurant-menu-link{
     position: relative;
 }
 .restaurant-heart{
+    display: inline-grid;
+    justify-items: end;
+
+
     .default-state{
         opacity: 1;
         position: absolute;
@@ -184,6 +205,7 @@ font-size: 16px;
     background-color: #F5F5F5;
     padding: 50px 15px;
     font-family: "Roboto", sans-serif;
+    width: 100%;
     
     
     .fa-heart:hover{
@@ -292,17 +314,18 @@ font-size: 16px;
     .euro--bold{
         font-weight: bold;
         padding: 10px 0;
+        font-size: 16px;
     }
     .menu-card-text{
         padding: 10px 0;
     }
     .menu-card-name--bold{
         font-weight: bold;
-        font-size: 22px;
+        font-size: 16px;
     }
     .menu-card-description{
         font-weight: 400;
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 
@@ -369,6 +392,7 @@ font-size: 16px;
     gap: 10px;
     padding: 25px;
     font-family: $roboto;
+    width: 100%;
 
     li{
         margin-bottom: 15px;
@@ -391,6 +415,10 @@ font-size: 16px;
 
 
 @media screen and (max-width: 992px) and (min-width: 769px){
+    .page-container{
+        display: flex;
+        flex-direction: column;
+    }
     .restaurants-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -421,8 +449,19 @@ font-size: 16px;
     }
     .how-it-works{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 30px 1fr;
+        align-self: center;
+        
+        .flex-btn{
+            display: flex;
+    flex-direction: row;
+    grid-row-start: 2;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100%;
+    justify-content: center;
+        }
 
         .button-guide{
             grid-row-start: 2;
@@ -431,20 +470,18 @@ font-size: 16px;
             }
         }
         h3{
-            grid-column-start: 2;
+            grid-column-start: 1;
+            display: inline-grid;
+
         }
     }
     .location-top-bar{
         font-size: 16px;
+        font-family: $roboto;
+        font-weight: 700;
     }
     .logo{
-        grid-template-columns: 1fr 1fr 1fr;
-
-
-        #logo{
-            grid-column-start: 2;
-            width: auto;
-        }
+        align-self: center;
     }
    .top-nav{
     .menu-logo{
@@ -455,11 +492,24 @@ font-size: 16px;
     }
    }
    .menu-container{
+    .euro--bold{
+        font-weight: bold;
+        padding: 10px 0;
+        font-size: 20px;
+    }
 
     button{
         width: 100%;
 
     }
+}
+.menu-card-name--bold{
+    font-weight: bold;
+    font-size: 22px;
+}
+.menu-card-description{
+    font-weight: 400;
+    font-size: 16px;
 }
     
 }
@@ -491,7 +541,7 @@ font-size: 16px;
     flex-direction: column;
     justify-self: center;
     width: 100%;
-    }
+    
 
 
 
@@ -515,11 +565,20 @@ font-size: 16px;
         }
     }
     .menu-container{
-
+        margin-top: -35%;
         button{
             width: 100%;
             max-width: 500px;
             font-weight: 800;
+            cursor: pointer;
+        }
+        .menu-card-name--bold{
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .menu-card-description{
+            font-weight: 400;
+            font-size: 16px;
         }
     }
     .how-it-works{
@@ -541,9 +600,17 @@ font-size: 16px;
         }
     }
     .location-top-bar{
-        font-size: 16px;
         grid-area: loc;
         width: 100%;
+        align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: $roboto;
+
+    .top-nav{
+        margin-top: -40%;
+        align-items: center;
+    }
     }
     .logo{
     grid-column-start: 2;
@@ -558,7 +625,7 @@ font-size: 16px;
         }
     }
     .menu-logo{
-        width: auto;
+        width: 200px;
     }
 
     .book-and-explore{
@@ -569,3 +636,4 @@ font-size: 16px;
     .footer{
         grid-area: footer;
     }
+}

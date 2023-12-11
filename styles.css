@@ -23,6 +23,8 @@ text: Roboto */
   justify-content: center;
   gap: 13px;
   padding: 10px 0px;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
 .book-and-explore {
@@ -33,6 +35,7 @@ text: Roboto */
   gap: 50px;
   padding: 30px 0;
   font-family: "Roboto", sans-serif;
+  width: 100%;
 }
 
 .book-and-explore h3 {
@@ -57,6 +60,7 @@ text: Roboto */
   align-items: flex-start;
   gap: 25px;
   margin: 50px 20px;
+  width: 100%;
 }
 .how-it-works .menu-icon {
   display: flex;
@@ -82,14 +86,15 @@ text: Roboto */
   border-radius: 20px;
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.15);
   gap: 25px;
-  width: 390px;
-  min-width: 200px;
+  max-width: 390px;
+  width: 80%;
 }
 .how-it-works .btn-icon {
   display: flex;
   gap: 25px;
   font-weight: 600;
   align-items: center;
+  white-space: nowrap;
 }
 
 .card {
@@ -106,16 +111,27 @@ text: Roboto */
 .card .restaurant-card-row {
   display: grid;
   padding: 14px 25px 14px 0;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.card .restaurant-card-row .restaurant-card-name {
+  font-weight: 700;
 }
 .card .restaurant-card-row .fa-heart {
   grid-column-start: 4;
+}
+
+.restaurant-card {
+  font-family: "Roboto", sans-serif;
 }
 
 .restaurant-menu-link {
   position: relative;
 }
 
+.restaurant-heart {
+  display: inline-grid;
+  justify-items: end;
+}
 .restaurant-heart .default-state {
   opacity: 1;
   position: absolute;
@@ -166,6 +182,7 @@ text: Roboto */
   background-color: #F5F5F5;
   padding: 50px 15px;
   font-family: "Roboto", sans-serif;
+  width: 100%;
 }
 .restaurants-container .fa-heart:hover {
   color: linear-gradient(28deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 87%);
@@ -256,17 +273,18 @@ text: Roboto */
 .menu-card .euro--bold {
   font-weight: bold;
   padding: 10px 0;
+  font-size: 16px;
 }
 .menu-card .menu-card-text {
   padding: 10px 0;
 }
 .menu-card .menu-card-name--bold {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 16px;
 }
 .menu-card .menu-card-description {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .menu-card:nth-child(1) {
@@ -320,6 +338,7 @@ text: Roboto */
   gap: 10px;
   padding: 25px;
   font-family: "Roboto", sans-serif;
+  width: 100%;
 }
 .footer li {
   margin-bottom: 15px;
@@ -337,6 +356,10 @@ text: Roboto */
 }
 
 @media screen and (max-width: 992px) and (min-width: 769px) {
+  .page-container {
+    display: flex;
+    flex-direction: column;
+  }
   .restaurants-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -364,8 +387,18 @@ text: Roboto */
   }
   .how-it-works {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 30px 1fr;
+    align-self: center;
+  }
+  .how-it-works .flex-btn {
+    display: flex;
+    flex-direction: row;
+    grid-row-start: 2;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100%;
+    justify-content: center;
   }
   .how-it-works .button-guide {
     grid-row-start: 2;
@@ -374,17 +407,16 @@ text: Roboto */
     width: 40px;
   }
   .how-it-works h3 {
-    grid-column-start: 2;
+    grid-column-start: 1;
+    display: inline-grid;
   }
   .location-top-bar {
     font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
   }
   .logo {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .logo #logo {
-    grid-column-start: 2;
-    width: auto;
+    align-self: center;
   }
   .top-nav .menu-logo {
     width: auto;
@@ -392,8 +424,21 @@ text: Roboto */
   .top-nav .fa-arrow-left {
     font-size: 30px;
   }
+  .menu-container .euro--bold {
+    font-weight: bold;
+    padding: 10px 0;
+    font-size: 20px;
+  }
   .menu-container button {
     width: 100%;
+  }
+  .menu-card-name--bold {
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .menu-card-description {
+    font-weight: 400;
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 993px) {
@@ -412,78 +457,91 @@ text: Roboto */
     justify-self: center;
     width: 100%;
   }
-  .card {
+  .restaurants-container .card {
     min-width: 300px;
   }
-  h3 {
+  .restaurants-container h3 {
     grid-row-start: 1;
   }
-  .full-palette {
+  .restaurants-container .full-palette {
     grid-row-start: 2;
   }
-  .enchanted-plate {
+  .restaurants-container .enchanted-plate {
     grid-row-start: 2;
   }
-  .bastille {
+  .restaurants-container .bastille {
     grid-row-start: 2;
   }
-  .le-gourmand {
+  .restaurants-container .le-gourmand {
     grid-row-start: 2;
   }
-}
-.menu-container button {
-  width: 100%;
-  max-width: 500px;
-  font-weight: 800;
-}
-
-.how-it-works {
-  grid-area: how;
-  flex-direction: column;
-  display: flex;
-  width: 100%;
-  justify-self: center;
-  align-items: center;
-}
-.how-it-works .button-guide {
-  grid-row-start: 2;
-}
-.how-it-works .button-guide .circle-number {
-  width: 40px;
-}
-.how-it-works h3 {
-  grid-column-start: 2;
-}
-
-.location-top-bar {
-  font-size: 16px;
-  grid-area: loc;
-  width: 100%;
-}
-
-.logo {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-area: logo;
-  justify-self: center;
-}
-.logo #logo {
-  grid-column-start: 2;
-  width: auto;
-}
-
-.menu-logo {
-  width: auto;
-}
-
-.book-and-explore {
-  grid-area: book;
-  justify-self: center;
-  width: 100%;
-}
-
-.footer {
-  grid-area: footer;
+  .menu-container {
+    margin-top: -35%;
+  }
+  .menu-container button {
+    width: 100%;
+    max-width: 500px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .menu-container .menu-card-name--bold {
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .menu-container .menu-card-description {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .how-it-works {
+    grid-area: how;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    justify-self: center;
+    align-items: center;
+  }
+  .how-it-works .button-guide {
+    grid-row-start: 2;
+  }
+  .how-it-works .button-guide .circle-number {
+    width: 40px;
+  }
+  .how-it-works h3 {
+    grid-column-start: 2;
+  }
+  .location-top-bar {
+    grid-area: loc;
+    width: 100%;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+  }
+  .location-top-bar .top-nav {
+    margin-top: -40%;
+    align-items: center;
+  }
+  .logo {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-area: logo;
+    justify-self: center;
+  }
+  .logo #logo {
+    grid-column-start: 2;
+    width: auto;
+  }
+  .menu-logo {
+    width: 200px;
+  }
+  .book-and-explore {
+    grid-area: book;
+    justify-self: center;
+    width: 100%;
+  }
+  .footer {
+    grid-area: footer;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
