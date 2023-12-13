@@ -12,13 +12,12 @@ text: Roboto */
   display: grid;
   place-items: center;
   padding: 10px 0;
-  width: 115px;
 }
 
 .location-top-bar {
   display: flex;
   align-content: center;
-  font-size: 10px;
+  font-size: 14px;
   background-color: #C5C5C5;
   justify-content: center;
   gap: 13px;
@@ -59,8 +58,13 @@ text: Roboto */
   flex-direction: column;
   align-items: flex-start;
   gap: 25px;
-  margin: 50px 20px;
-  width: 100%;
+  margin: 50px 0;
+  padding: 20px;
+}
+.how-it-works .flex-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .how-it-works .menu-icon {
   display: flex;
@@ -88,13 +92,7 @@ text: Roboto */
   gap: 25px;
   max-width: 390px;
   width: 80%;
-}
-.how-it-works .btn-icon {
-  display: flex;
-  gap: 25px;
   font-weight: 600;
-  align-items: center;
-  white-space: nowrap;
 }
 
 .card {
