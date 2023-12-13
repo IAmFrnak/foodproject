@@ -24,6 +24,7 @@ text: Roboto */
   padding: 10px 0px;
   width: 100%;
   font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 
 .book-and-explore {
@@ -91,8 +92,9 @@ text: Roboto */
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.15);
   gap: 25px;
   max-width: 390px;
-  width: 80%;
+  width: 100%;
   font-weight: 600;
+  height: 75px;
 }
 
 .card {
