@@ -296,6 +296,13 @@ text: Roboto */
   font-weight: 400;
   font-size: 12px;
 }
+.menu-card:hover {
+  cursor: pointer;
+}
+.menu-card:hover .price-container {
+  right: 0;
+  transition: right 0.5s ease-in-out;
+}
 
 .menu-card:nth-child(1) {
   animation-delay: 0.2s;
@@ -428,7 +435,15 @@ body {
 .check {
   background: #99E2D0;
   color: white;
-  padding: 50px;
+  padding: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.check p {
+  top: 30px;
+  position: absolute;
 }
 
 .price-container {
@@ -436,12 +451,11 @@ body {
   grid-template-columns: repeat(2, 1fr);
   place-content: center center;
   position: absolute;
-  right: -48%;
+  right: -31%;
   top: 0;
   bottom: 0;
   transition: right 1.5s ease-in-out;
-  align-items: baseline;
-  align-content: stretch;
+  align-items: end;
 }
 
 .footer {
@@ -561,7 +575,7 @@ body {
     font-size: 16px;
   }
   .price-container {
-    right: -20%;
+    right: -12%;
   }
 }
 @media screen and (min-width: 993px) {
@@ -572,13 +586,6 @@ body {
     grid-template-rows: 100px 100px 300px 411px 1fr 250px;
     grid-template-areas: ". logo logo ." ". loc loc ." ". book book ." ". how how ." ". menu menu ." ". footer footer .";
     grid-gap: 10px;
-  }
-  .menu-card .menu-card:hover {
-    cursor: pointer;
-  }
-  .menu-card .menu-card:hover .price-container {
-    right: 0;
-    transition: right 0.5s ease-in-out;
   }
   .restaurants-container {
     grid-area: menu;
@@ -673,7 +680,7 @@ body {
     grid-area: footer;
   }
   .price-container {
-    right: -12%;
+    right: -7%;
   }
 }
 

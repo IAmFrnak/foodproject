@@ -347,6 +347,13 @@ font-size: 16px;
         font-weight: 400;
         font-size: 12px;
     }
+    &:hover {
+        cursor: pointer;
+        .price-container {
+          right: 0;
+          transition: right 0.5s ease-in-out;
+        }
+      }
 }
 
 .menu-card:nth-child(1){
@@ -478,7 +485,16 @@ body{
   .check{
     background: $brand-tertiary;
     color: white;
-    padding: 50px;
+    padding: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    p{
+        top: 30px;
+        position: absolute;
+    }
   }
 
   .price-container {
@@ -486,12 +502,11 @@ body{
     grid-template-columns: repeat(2, 1fr);
     place-content: center center;
     position: absolute;
-    right: -48%;
+    right: -31%;
     top: 0;
     bottom: 0;
     transition: right 1.5s ease-in-out;
-    align-items: baseline;
-    align-content: stretch;
+    align-items: end;
   }
 
 
@@ -632,8 +647,10 @@ body{
     font-size: 16px;
 }
 .price-container {
-    right: -20%;
+    right: -12%;
   }
+
+  
     
 }
 
@@ -656,15 +673,7 @@ body{
 
     }
     
-    .menu-card{
-        .menu-card:hover {
-            cursor: pointer;
-            .price-container {
-              right: 0;
-              transition: right 0.5s ease-in-out;
-            }
-          }
-    }
+    
     
     .restaurants-container{
         grid-area: menu;
@@ -768,6 +777,6 @@ body{
         grid-area: footer;
     }
     .price-container {
-        right: -12%;
+        right: -7%;
       }
 }
