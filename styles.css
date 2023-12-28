@@ -276,6 +276,9 @@ text: Roboto */
   animation: fadeIn 2s ease-in-out forwards;
   opacity: 0;
   margin: 15px 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 .menu-card .euro--bold {
   font-weight: bold;
@@ -479,14 +482,17 @@ body {
     display: flex;
     flex-direction: column;
   }
+  .menu-card:hover {
+    cursor: pointer;
+  }
+  .menu-card:hover .price-container {
+    right: 0;
+    transition: right 0.5s ease-in-out;
+  }
   .restaurants-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 30px 1fr 1fr;
-  }
-  .restaurants-container .menu-card:hover .price-container {
-    right: 0;
-    transition: right 0.5s ease-in-out;
   }
   .restaurants-container .card {
     min-width: 300px;
@@ -575,6 +581,9 @@ body {
     grid-template-rows: 100px 100px 300px 411px 1fr 250px;
     grid-template-areas: ". logo logo ." ". loc loc ." ". book book ." ". how how ." ". menu menu ." ". footer footer .";
     grid-gap: 10px;
+  }
+  .menu-card .menu-card:hover {
+    cursor: pointer;
   }
   .menu-card .menu-card:hover .price-container {
     right: 0;
