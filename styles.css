@@ -414,6 +414,42 @@ body {
   font-size: 32px;
 }
 
+@keyframes text-flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+.check {
+  background: #99E2D0;
+  color: white;
+  padding: 50px;
+}
+
+.price-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-content: center center;
+  position: absolute;
+  right: -45%;
+  top: 0;
+  bottom: 0;
+  transition: right 1.5s ease-in-out;
+  align-items: end;
+}
+
+@media screen and (max-width: 400px) {
+  .price-container {
+    right: -45%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .price-container {
+    right: -35%;
+  }
+}
 .footer {
   background-color: rgb(63, 63, 63);
   display: flex;
@@ -447,6 +483,10 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 30px 1fr 1fr;
+  }
+  .restaurants-container .menu-card:hover .price-container {
+    right: 0;
+    transition: right 0.5s ease-in-out;
   }
   .restaurants-container .card {
     min-width: 300px;
@@ -523,6 +563,9 @@ body {
     font-weight: 400;
     font-size: 16px;
   }
+  .price-container {
+    right: -35%;
+  }
 }
 @media screen and (min-width: 993px) {
   .page-container {
@@ -532,6 +575,10 @@ body {
     grid-template-rows: 100px 100px 300px 411px 1fr 250px;
     grid-template-areas: ". logo logo ." ". loc loc ." ". book book ." ". how how ." ". menu menu ." ". footer footer .";
     grid-gap: 10px;
+  }
+  .menu-card .menu-card:hover .price-container {
+    right: 0;
+    transition: right 0.5s ease-in-out;
   }
   .restaurants-container {
     grid-area: menu;
@@ -624,6 +671,9 @@ body {
   }
   .footer {
     grid-area: footer;
+  }
+  .price-container {
+    right: -20%;
   }
 }
 
