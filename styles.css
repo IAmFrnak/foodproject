@@ -436,23 +436,14 @@ body {
   grid-template-columns: repeat(2, 1fr);
   place-content: center center;
   position: absolute;
-  right: -45%;
+  right: -48%;
   top: 0;
   bottom: 0;
   transition: right 1.5s ease-in-out;
-  align-items: end;
+  align-items: baseline;
+  align-content: stretch;
 }
 
-@media screen and (max-width: 400px) {
-  .price-container {
-    right: -45%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .price-container {
-    right: -35%;
-  }
-}
 .footer {
   background-color: rgb(63, 63, 63);
   display: flex;
@@ -570,7 +561,7 @@ body {
     font-size: 16px;
   }
   .price-container {
-    right: -35%;
+    right: -20%;
   }
 }
 @media screen and (min-width: 993px) {
@@ -682,7 +673,7 @@ body {
     grid-area: footer;
   }
   .price-container {
-    right: -20%;
+    right: -12%;
   }
 }
 
