@@ -92,6 +92,7 @@ font-size: 16px;
         padding: 5px;
         text-align: center;
         width: 30px;
+        height: 30px;
         color: white;
         margin-left: -110px;
     }
@@ -600,9 +601,6 @@ body{
 
         .button-guide{
             grid-row-start: 2;
-            .circle-number{
-                width: 40px;
-            }
         }
         h3{
             grid-column-start: 1;
@@ -731,9 +729,6 @@ body{
 
         .button-guide{
             grid-row-start: 2;
-                .circle-number{
-                    width: 40px;
-                }
         }
         h3{
             grid-column-start: 2;

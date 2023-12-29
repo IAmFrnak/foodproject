@@ -80,6 +80,7 @@ text: Roboto */
   padding: 5px;
   text-align: center;
   width: 30px;
+  height: 30px;
   color: white;
   margin-left: -110px;
 }
@@ -537,9 +538,6 @@ body {
   .how-it-works .button-guide {
     grid-row-start: 2;
   }
-  .how-it-works .button-guide .circle-number {
-    width: 40px;
-  }
   .how-it-works h3 {
     grid-column-start: 1;
     display: inline-grid;
@@ -639,9 +637,6 @@ body {
   }
   .how-it-works .button-guide {
     grid-row-start: 2;
-  }
-  .how-it-works .button-guide .circle-number {
-    width: 40px;
   }
   .how-it-works h3 {
     grid-column-start: 2;
