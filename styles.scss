@@ -97,10 +97,17 @@ $shrik: "Shrikhand", serif;
     border-radius: 20px;
     @include card-shadow;
     gap: 25px;
-    max-width: 390px;
     width: 100%;
     font-weight: 600;
     height: 75px;
+
+    .fa-store{
+        color: $brand-primary;
+    }
+
+    &:nth-child(3){
+        background-color: rgba(147, 86, 220, .13);
+    }
   }
   
 }
@@ -120,7 +127,7 @@ $shrik: "Shrikhand", serif;
   .restaurant-card-row {
     display: grid;
     padding: 14px 25px 14px 0;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2em;
 
     .restaurant-card-name {
       font-weight: 700;
@@ -151,11 +158,8 @@ $shrik: "Shrikhand", serif;
     opacity: 0;
     position: absolute;
     transition: opacity 500ms ease-in;
-    background-color: linear-gradient(
-      28deg,
-      rgba(255, 121, 218, 1) 0%,
-      rgba(147, 86, 220, 1) 87%
-    );
+    width: 1em;
+    height: 1em;
     -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   }
