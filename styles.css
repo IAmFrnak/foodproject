@@ -50,6 +50,10 @@
   color: white;
   padding: 10px 25px;
 }
+.explore-button:hover {
+  background-image: linear-gradient(to bottom right, rgba(255, 121, 217, 0.7058823529), rgba(146, 86, 220, 0.6784313725));
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.606);
+}
 
 .how-it-works {
   font-family: "Roboto", sans-serif;

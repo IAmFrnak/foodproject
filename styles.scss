@@ -57,6 +57,11 @@ $shrik: "Shrikhand", serif;
   border-radius: 25px;
   color: white;
   padding: 10px 25px;
+
+  &:hover{
+    background-image: linear-gradient(to bottom right, #ff79d9b4, #9256dcad);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.606);
+}
 }
 .how-it-works {
   font-family: $roboto;
