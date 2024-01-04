@@ -45,14 +45,17 @@
 }
 
 .explore-button {
-  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
   border-radius: 25px;
   color: white;
   padding: 10px 25px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.15);
 }
 .explore-button:hover {
-  background-image: linear-gradient(to bottom right, rgba(255, 121, 217, 0.7058823529), rgba(146, 86, 220, 0.6784313725));
+  background: linear-gradient(to bottom right, rgba(255, 121, 217, 0.9058823529), rgba(146, 86, 220, 0.9058823529));
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.606);
+  transition: all 0.5s ease-in;
 }
 
 .how-it-works {
@@ -200,13 +203,17 @@
 .top-nav {
   position: relative;
   padding: 25px 0 13px 25px;
+  display: flex;
+  font-size: 32px;
 }
-.top-nav .menu-logo {
+
+.menu-logo {
   width: auto;
   display: block;
   margin: 0 auto;
 }
-.top-nav .arrow {
+
+.arrow {
   position: absolute;
   left: 10px;
   top: 50%;
@@ -240,7 +247,7 @@
   font-size: 27px;
 }
 .menu-container button {
-  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
   border-radius: 25px;
   color: white;
   padding: 15px 50px;
@@ -300,10 +307,18 @@
 .menu-card .menu-card-name--bold {
   font-weight: bold;
   font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 96%;
+  white-space: nowrap;
 }
 .menu-card .menu-card-description {
   font-weight: 400;
   font-size: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 96%;
+  white-space: nowrap;
 }
 .menu-card:hover {
   cursor: pointer;
@@ -492,6 +507,15 @@ body {
   font-weight: 500;
 }
 
+button {
+  cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(to bottom right, rgba(255, 121, 217, 0.9058823529), rgba(146, 86, 220, 0.9058823529));
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.606);
+  transition: all 0.5s ease-in;
+}
+
 @media screen and (max-width: 992px) and (min-width: 769px) {
   .page-container {
     display: flex;
@@ -576,10 +600,12 @@ body {
   .menu-card-name--bold {
     font-weight: bold;
     font-size: 22px;
+    width: 100%;
   }
   .menu-card-description {
     font-weight: 400;
     font-size: 16px;
+    width: 100%;
   }
   .price-container {
     right: -12%;
@@ -631,10 +657,12 @@ body {
   .menu-container .menu-card-name--bold {
     font-weight: bold;
     font-size: 22px;
+    width: 100%;
   }
   .menu-container .menu-card-description {
     font-weight: 400;
     font-size: 16px;
+    width: 100%;
   }
   .how-it-works {
     grid-area: how;
@@ -684,7 +712,7 @@ body {
     grid-area: footer;
   }
   .price-container {
-    right: -7%;
+    right: -8%;
   }
 }
 
