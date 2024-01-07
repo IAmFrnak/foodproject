@@ -60,11 +60,11 @@ $shrik: "Shrikhand", serif;
   cursor: pointer;
   @include card-shadow;
 
-  &:hover{
+  &:hover {
     background: linear-gradient(to bottom right, #ff79d9e7, #9256dce7);
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.606);
-    transition: all .5s ease-in;
-}
+    transition: all 0.5s ease-in;
+  }
 }
 .how-it-works {
   font-family: $roboto;
@@ -109,15 +109,14 @@ $shrik: "Shrikhand", serif;
     font-weight: 600;
     height: 75px;
 
-    .fa-store{
-        color: $brand-primary;
+    .fa-store {
+      color: $brand-primary;
     }
 
-    &:nth-child(3){
-        background-color: rgba(147, 86, 220, .13);
+    &:nth-child(3) {
+      background-color: rgba(147, 86, 220, 0.13);
     }
   }
-  
 }
 
 .card {
@@ -168,13 +167,12 @@ $shrik: "Shrikhand", serif;
     width: 1em;
     height: 1em;
     -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 
   &:hover {
     .selected-state {
       opacity: 1;
-      
     }
     .default-state {
       opacity: 0;
@@ -214,8 +212,6 @@ $shrik: "Shrikhand", serif;
   padding: 50px 15px;
   font-family: "Roboto", sans-serif;
   width: 100%;
-
-  
 }
 
 .top-nav {
@@ -223,19 +219,19 @@ $shrik: "Shrikhand", serif;
   padding: 25px 0 13px 25px;
   display: flex;
   font-size: 32px;
-  }
+}
 
-  .menu-logo {
-    width: auto;
-    display: block;
-    margin: 0 auto;
-  }
-  .arrow {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+.menu-logo {
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+.arrow {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .hero-container {
   .hero-img {
     object-fit: cover;
@@ -532,13 +528,13 @@ body {
   }
 }
 
-button{
-    cursor: pointer;
-    &:hover{
-        background: linear-gradient(to bottom right, #ff79d9e7, #9256dce7);
-        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.606);
-        transition: all .5s ease-in;
-    }
+button {
+  cursor: pointer;
+  &:hover {
+    background: linear-gradient(to bottom right, #ff79d9e7, #9256dce7);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.606);
+    transition: all 0.5s ease-in;
+  }
 }
 
 @media screen and (max-width: 992px) and (min-width: 769px) {
@@ -637,7 +633,7 @@ button{
     font-size: 22px;
     width: 100%;
   }
-  
+
   .menu-card-description {
     font-weight: 400;
     font-size: 16px;
