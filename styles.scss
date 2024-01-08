@@ -329,16 +329,16 @@ $shrik: "Shrikhand", serif;
     font-size: 16px;
     text-overflow: ellipsis;
     overflow: hidden;
-    width: 96%;
     white-space: nowrap;
+    transition: width 0.5s ease-in-out;
   }
   .menu-card-description {
     font-weight: 400;
     font-size: 12px;
     text-overflow: ellipsis;
     overflow: hidden;
-    width: 96%;
     white-space: nowrap;
+    transition: width 0.5s ease-in-out;
   }
   &:hover {
     cursor: pointer;
@@ -347,13 +347,15 @@ $shrik: "Shrikhand", serif;
       transition: right 0.5s ease-in-out;
     }
     .check p {
-      animation-play-state: running;
+      animation: check 1s ease-in ;
+    animation-delay: 0.5s;
     }
-    &name--bold{
+    .menu-card-name--bold{
       width: 190px;
     }
-    &description{
+    .menu-card-description{
       width: 190px;
+      
     }
   }
 }
@@ -498,12 +500,9 @@ body {
     border-radius: 100%;
     background: white;
     font-weight: bold;
-    animation: check 1.5s linear;
     width: 25px;
     height: 25px;
     text-align: center;
-    animation-play-state: paused;
-    animation-delay: 0.7s;
   }
 }
 
