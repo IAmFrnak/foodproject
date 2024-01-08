@@ -327,6 +327,15 @@
   right: 0;
   transition: right 0.5s ease-in-out;
 }
+.menu-card:hover .check p {
+  animation-play-state: running;
+}
+.menu-card:hovername--bold {
+  width: 190px;
+}
+.menu-card:hoverdescription {
+  width: 190px;
+}
 
 .menu-card:nth-child(1) {
   animation-delay: 0.2s;
@@ -458,18 +467,36 @@ body {
 }
 .check {
   background: #99e2d0;
-  color: white;
+  color: #99e2d0;
   padding: 38px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  height: 110%;
 }
 .check p {
   top: 30px;
   position: absolute;
+  border-radius: 100%;
+  background: white;
+  font-weight: bold;
+  animation: check 1.5s linear;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  animation-play-state: paused;
+  animation-delay: 0.7s;
 }
 
+@keyframes check {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .price-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

@@ -346,6 +346,15 @@ $shrik: "Shrikhand", serif;
       right: 0;
       transition: right 0.5s ease-in-out;
     }
+    .check p {
+      animation-play-state: running;
+    }
+    &name--bold{
+      width: 190px;
+    }
+    &description{
+      width: 190px;
+    }
   }
 }
 
@@ -475,16 +484,35 @@ body {
 }
 .check {
   background: $brand-tertiary;
-  color: white;
+  color: $brand-tertiary;
   padding: 38px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  height: 110%;
 
   p {
     top: 30px;
     position: absolute;
+    border-radius: 100%;
+    background: white;
+    font-weight: bold;
+    animation: check 1.5s linear;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    animation-play-state: paused;
+    animation-delay: 0.7s;
+  }
+}
+
+@keyframes check {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
