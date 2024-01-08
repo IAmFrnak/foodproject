@@ -350,12 +350,21 @@ $shrik: "Shrikhand", serif;
       animation: check 1s ease-in ;
     animation-delay: 0.5s;
     }
-    .menu-card-name--bold{
-      width: 190px;
-    }
-    .menu-card-description{
-      width: 190px;
-      
+  }
+}
+@media screen and (max-width: 480px) {
+  .menu-card{
+
+    &:hover{
+      .menu-card-name--bold{
+        width: 190px;
+        transition: width 1s ease-in-out;
+      }
+      .menu-card-description{
+        width: 190px;
+        transition: width 1s ease-in-out;
+        
+      }
     }
   }
 }
@@ -784,7 +793,7 @@ button {
     grid-area: footer;
   }
   .price-container {
-    right: -8%;
+    right: -7%;
   }
 }
  

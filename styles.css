@@ -331,13 +331,17 @@
   animation: check 1s ease-in;
   animation-delay: 0.5s;
 }
-.menu-card:hover .menu-card-name--bold {
-  width: 190px;
-}
-.menu-card:hover .menu-card-description {
-  width: 190px;
-}
 
+@media screen and (max-width: 480px) {
+  .menu-card:hover .menu-card-name--bold {
+    width: 190px;
+    transition: width 1s ease-in-out;
+  }
+  .menu-card:hover .menu-card-description {
+    width: 190px;
+    transition: width 1s ease-in-out;
+  }
+}
 .menu-card:nth-child(1) {
   animation-delay: 0.2s;
 }
@@ -737,7 +741,7 @@ button:hover {
     grid-area: footer;
   }
   .price-container {
-    right: -8%;
+    right: -7%;
   }
 }
 
