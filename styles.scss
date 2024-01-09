@@ -800,7 +800,18 @@ button {
     grid-area: footer;
   }
   .price-container {
-    right: -7%;
+    right: -9%;
+  }
+}
+
+@media screen and (min-width: 1300px){
+  .price-container {
+    right: -6%;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 512px){
+  .price-container {
+    right: -16%;
   }
 }
  
