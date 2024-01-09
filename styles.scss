@@ -330,7 +330,6 @@ $shrik: "Shrikhand", serif;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    transition: width 0.5s ease-in-out;
   }
   .menu-card-description {
     font-weight: 400;
@@ -338,7 +337,6 @@ $shrik: "Shrikhand", serif;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    transition: width 0.5s ease-in-out;
   }
   &:hover {
     cursor: pointer;
@@ -348,7 +346,7 @@ $shrik: "Shrikhand", serif;
     }
     .check p {
       animation: check 1s ease-in ;
-    animation-delay: 0.5s;
+    animation-delay: 0.25s;
     }
   }
 }
@@ -357,15 +355,24 @@ $shrik: "Shrikhand", serif;
 
     &:hover{
       .menu-card-name--bold{
-        width: 190px;
-        transition: width 1s ease-in-out;
+        animation: width .5s ease-in-out;
+        animation-fill-mode: forwards;
       }
       .menu-card-description{
-        width: 190px;
-        transition: width 1s ease-in-out;
-        
+        animation: width .5s ease-in-out;
+        animation-fill-mode: forwards;
       }
     }
+  }
+
+  @keyframes width {
+   0%{
+    width: 100%;
+   }
+
+   100%{
+    width: 190px;
+   }
   }
 }
 
@@ -501,7 +508,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 110%;
+  height: 90px;
 
   p {
     top: 30px;
@@ -529,7 +536,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   place-content: center center;
   position: absolute;
-  right: -31%;
+  right: -30%;
   top: 0;
   bottom: 0;
   transition: right 1.5s ease-in-out;

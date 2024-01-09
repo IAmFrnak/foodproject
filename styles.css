@@ -310,7 +310,6 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  transition: width 0.5s ease-in-out;
 }
 .menu-card .menu-card-description {
   font-weight: 400;
@@ -318,7 +317,6 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  transition: width 0.5s ease-in-out;
 }
 .menu-card:hover {
   cursor: pointer;
@@ -329,17 +327,25 @@
 }
 .menu-card:hover .check p {
   animation: check 1s ease-in;
-  animation-delay: 0.5s;
+  animation-delay: 0.25s;
 }
 
 @media screen and (max-width: 480px) {
   .menu-card:hover .menu-card-name--bold {
-    width: 190px;
-    transition: width 1s ease-in-out;
+    animation: width 0.5s ease-in-out;
+    animation-fill-mode: forwards;
   }
   .menu-card:hover .menu-card-description {
-    width: 190px;
-    transition: width 1s ease-in-out;
+    animation: width 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes width {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 190px;
+    }
   }
 }
 .menu-card:nth-child(1) {
@@ -478,7 +484,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 110%;
+  height: 90px;
 }
 .check p {
   top: 30px;
@@ -504,7 +510,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   place-content: center center;
   position: absolute;
-  right: -31%;
+  right: -30%;
   top: 0;
   bottom: 0;
   transition: right 1.5s ease-in-out;
