@@ -109,13 +109,17 @@ $shrik: "Shrikhand", serif;
     font-weight: 600;
     height: 75px;
 
+    &:hover{
+      background-color: rgba(147, 86, 220, 0.13);
+    }
+
     .fa-store {
       color: $brand-primary;
     }
 
-    &:nth-child(3) {
-      background-color: rgba(147, 86, 220, 0.13);
-    }
+    // &:nth-child(3) {
+    //   background-color: rgba(147, 86, 220, 0.13);
+    // }
   }
 }
 
@@ -237,6 +241,18 @@ $shrik: "Shrikhand", serif;
     object-fit: cover;
     object-position: center;
     width: 100%;
+  }
+}
+
+@keyframes rotateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
