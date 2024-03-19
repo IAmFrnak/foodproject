@@ -1,28 +1,32 @@
-const button = document.getElementsByClassName('explore-button');
+const buttons = document.getElementsByClassName('explore-button');
 
-// button.addEventListener('mouseenter', () => {
-//     button.style.backgroundColor = 'rgba(147, 86, 220, 0.13)';
-// });
+// Iterate over the collection of buttons and apply event listeners to each
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('mouseenter', () => {
+    const button = buttons[i]; // Current button
+    // Set a timeout to apply the rotating animation after a short delay
+    setTimeout(() => {
+      button.style.background = 'linear-gradient(to bottom right, #ff79da, #9356dc)';
+      button.style.animation = 'rotateGradient 3s infinite linear'; // Apply rotating animation
+    }, 100);
+  });
 
-button.addEventListener('mouseenter', () => {
-  // Set a timeout to apply the rotating animation after a short delay
-  setTimeout(() => {
-    button.style.background = 'linear-gradient(to bottom right, #ff79da, #9356dc)';
-    button.style.animation = 'rotateGradient 3s infinite linear'; // Apply rotating animation
-  }, 100);
-});
+  buttons[i].addEventListener('mouseleave', () => {
+    const button = buttons[i]; // Current button
+    button.style.background = 'linear-gradient(to bottom right, #ff79da, #9356dc)'; // restore original color
+    button.style.animation = 'none'; // Remove animation
+  });
+}
 
-button.addEventListener('mouseleave', () => {
-  button.style.backgroundColor = 'linear-gradient(to bottom right, #ff79da, #9356dc)'; // restore original color
-  button.style.animation = 'none'; // Remove animation
-});
+const guides = document.getElementsByClassName('button-guide');
 
-const guide = document.getElementsByClassName('button-guide');
+// Iterate over the collection of guides and apply event listeners to each
+for (let i = 0; i < guides.length; i++) {
+  guides[i].addEventListener('mouseenter', () => {
+    guides[i].style.backgroundColor = 'rgba(147, 86, 220, 0.13)';
+  });
 
-guide.addEventListener('mouseenter', () => {
-  guide.style.backgroundColor = 'rgba(147, 86, 220, 0.13)';
-});
-
-guide.addEventListener('mouseleave', () => {
-  guide.style.backgroundColor = '#f5f5f5'; // restore original color
-});
+  guides[i].addEventListener('mouseleave', () => {
+    guides[i].style.backgroundColor = '#f5f5f5'; // restore original color
+  });
+}
