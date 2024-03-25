@@ -66,16 +66,7 @@ $shrik: "Shrikhand", serif;
     transition: all 0.5s ease-in;
   }
 }
-.clicked-error{
-  background-color: #dd4f65;
-}
-.clicked-confirmed{
-  right: 0;
 
-}
-.clicked-right{
-  right: 0;
-}
 .how-it-works {
   font-family: $roboto;
   display: flex;
@@ -376,6 +367,19 @@ $shrik: "Shrikhand", serif;
     }
   }
 }
+
+.clicked-error{
+  background-color: #dd4f65;
+}
+.clicked-confirmed{
+  right: 0;
+
+}
+.clicked-right{
+  right: 0;
+}
+
+
 @media screen and (max-width: 480px) {
   .menu-card{
 

@@ -31,11 +31,16 @@ for (let i = 0; i < guides.length; i++) {
   });
 }
 
-const priceBox = document.getElementsByClassName('price-container');
-const checkMark = document.getElementsByClassName('check');
+const priceBoxes = document.querySelectorAll('.price-container');
+const checkMarks = document.querySelectorAll('.check');
 
-checkMark.addEventListener('click', () => {
-    checkMark.classList.add('clicked-confirmed');
-    checkMark.classList.remove('clicked-error');
+checkMarks.forEach((checkMark, index) => {
+  checkMark.addEventListener('click', () => {
+    const priceBox = priceBoxes[index];
+    if (checkMark.classList.contains('clicked-error')) {
+      checkMark.classList.remove('clicked-error');
+    }
+
     priceBox.classList.add('clicked-right');
-})
+  });
+});
