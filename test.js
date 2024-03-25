@@ -30,3 +30,12 @@ for (let i = 0; i < guides.length; i++) {
     guides[i].style.backgroundColor = '#f5f5f5'; // restore original color
   });
 }
+
+const priceBox = document.getElementsByClassName('price-container');
+const checkMark = document.getElementsByClassName('check');
+
+checkMark.addEventListener('click', () => {
+    checkMark.classList.add('clicked-confirmed');
+    checkMark.classList.remove('clicked-error');
+    priceBox.classList.add('clicked-right');
+})
