@@ -368,17 +368,35 @@ $shrik: "Shrikhand", serif;
   }
 }
 
-.clicked-error{
-  background-color: #dd4f65;
-}
-.clicked-confirmed{
-  right: 0;
 
-}
+.error{
+
+  background: #ff7979;
+  color: #ff7979;
+  padding: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 90px;
+
+  .error p {
+    animation: check 1s ease-in ;
+    animation-delay: 0.25s;
+    }
+  }
+
 .clicked-right{
-  right: 0;
-}
+  right: 0 !important;
+  pointer-events: none;
+} 
 
+.check-hidden{
+  display: none;
+}
+.error-hidden{
+  display: none;
+}
 
 @media screen and (max-width: 480px) {
   .menu-card{

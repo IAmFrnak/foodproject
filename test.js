@@ -33,14 +33,26 @@ for (let i = 0; i < guides.length; i++) {
 
 const priceBoxes = document.querySelectorAll('.price-container');
 const checkMarks = document.querySelectorAll('.check');
+const error = document.querySelectorAll('.error')
 
 checkMarks.forEach((checkMark, index) => {
   checkMark.addEventListener('click', () => {
     const priceBox = priceBoxes[index];
-    if (checkMark.classList.contains('clicked-error')) {
-      checkMark.classList.remove('clicked-error');
+    if (checkMark.classList.contains('error')) {
+      checkMark.classList.add('error-hidden');
     }
 
     priceBox.classList.add('clicked-right');
+  });
+});
+
+error.forEach((errors, index) => {
+  errors.addEventListener('click', () => {
+    const priceBox = priceBoxes[index];
+    if (errors.classList.contains('error-hidden')) {
+      errors.classList.remove('error-hidden');
+    }
+
+    priceBox.classList.remove('clicked-right');
   });
 });
